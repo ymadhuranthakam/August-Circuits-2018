@@ -1,0 +1,14 @@
+t = int(input())
+while(t<100000):
+    for i in range(0,t):
+        x = input()
+        l = list(map(int, x.split()))
+        l[4] = l[4]-l[0]-l[1]*l[2]
+        count = l[2]
+        if(l[4]>0):
+            a = l[4]/(l[1]+l[3])
+            b = l[4]%(l[1]+l[3])
+            count = count+int(a)*2
+        elif(b==l[1] or b==l[3]):
+            count = count+1
+        print(count)
